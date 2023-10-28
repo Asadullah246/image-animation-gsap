@@ -7,32 +7,29 @@ gsap.registerPlugin(ScrollTrigger);
 const HorizontalScrollComponent: React.FC = () => {
   const sectionPinRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    const sectionPin = sectionPinRef.current;
+  // useEffect(() => { 
+  //   const sectionPin = sectionPinRef?.current;
 
-    if (sectionPin) {
-      const containerAnimation = gsap.to(sectionPin, {
-        scrollTrigger: {
-          trigger: sectionPin,
-          start: 'top top',
-          end: () => `+=${sectionPin.offsetWidth}`,
-          pin: true,
-          scrub: true,
-        },
-        x: () =>
-          `-${sectionPin.scrollWidth - document.documentElement.clientWidth}px`,
-        ease: 'none',
-      });
+  //   if (sectionPin) {
+  //     const containerAnimation = gsap.to(sectionPin, {
+  //       scrollTrigger: {
+  //         trigger: sectionPin,
+  //         start: 'top top',
+  //         end: () => `+=${sectionPin.offsetWidth}`,
+  //         pin: true,
+  //         scrub: true,
+  //       },
+  //       x: () =>
+  //         `-${sectionPin.scrollWidth - document.documentElement.clientWidth}px`,
+  //       ease: 'none',
+  //     });
 
-      return () => {
-        containerAnimation.kill();
-      };
-    }
-    else {
-      // Return an empty function when sectionPin is falsy
-      return () => { };
-    }
-  }, []); 
+  //     return () => {
+  //       containerAnimation.kill();
+  //     };
+  //   }
+
+  // }, []);
 
 
 
