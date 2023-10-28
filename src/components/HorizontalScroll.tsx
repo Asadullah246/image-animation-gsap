@@ -1,13 +1,12 @@
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import React, { useEffect, useRef } from 'react';
+
+import React, { useRef } from 'react';
 
 
 
 const HorizontalScrollComponent: React.FC = () => {
   const sectionPinRef = useRef<HTMLDivElement | null>(null);
 
- 
+
 
   return (
     <div className="flex h-screen flex-col">
