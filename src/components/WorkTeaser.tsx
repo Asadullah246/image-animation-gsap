@@ -10,10 +10,15 @@ import SliceAnimation from './SliceAnimation';
 
 function WorkTeaser() {
 
-  const sectionRef = useRef(null);
-  const triggerRef = useRef(null);
-  const sectionRef2 = useRef(null);
-  const triggerRef2 = useRef(null);
+  // const sectionRef = useRef(null);
+  // const triggerRef = useRef(null);
+  // const sectionRef2 = useRef(null);
+  // const triggerRef2 = useRef(null); 
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+const triggerRef = useRef<HTMLDivElement | null>(null);
+const sectionRef2 = useRef<HTMLDivElement | null>(null);
+const triggerRef2 = useRef<HTMLDivElement | null>(null);
+
 
   gsap.registerPlugin(ScrollTrigger);
 
