@@ -28,7 +28,13 @@ const HorizontalScrollComponent: React.FC = () => {
         containerAnimation.kill();
       };
     }
-  }, []);
+    else {
+      // Return an empty function when sectionPin is falsy
+      return () => { };
+    }
+  }, []); 
+
+
 
   return (
     <div className="flex h-screen flex-col">
